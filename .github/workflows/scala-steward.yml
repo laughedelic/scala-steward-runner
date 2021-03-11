@@ -25,4 +25,4 @@ jobs:
           # github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           github-token: ${{ steps.generate-token.outputs.token }}
           author-email: 103842+laughedelic[bot]@users.noreply.github.com
-          # author-name: laughedelic[bot]
+          author-name: laughedelic[bot]
