@@ -1,0 +1,27 @@
+name: Scala Steward
+
+on:
+  # manual trigger
+  workflow_dispatch:
+
+jobs:
+  scala-steward:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate token
+        id: generate-token
+        uses: tibdex/github-app-token@v1
+        with:
+          app_id: 103842
+          private_key: ${{ secrets.AUTHOR_APP_PRIVATE_KEY }}
+
+      - name: Launch Scala Steward
+        uses: scala-steward-org/scala-steward-action@v2
+        with:
+          # used to list repositories:
+          github-app-id: 104507
+          github-app-key: ${{ secrets.SCALA_STEWARD_APP_PRIVATE_KEY }}
+          # used to author pull requests:
+          github-token: ${{ steps.generate-token.outputs.token }}
+          author-name: laughedelic-bot[bot]
+          author-email: 103842+laughedelic-bot[bot]@users.noreply.github.com
