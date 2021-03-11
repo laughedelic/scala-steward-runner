@@ -16,7 +16,7 @@ jobs:
       #     private_key: ${{ secrets.AUTHOR_APP_PRIVATE_KEY }}
 
       - name: Launch Scala Steward
-        uses: scala-steward-org/scala-steward-action@v2
+        uses: laughedelic/scala-steward-action@gh-app-args
         with:
           # used to list repositories:
           github-app-id: 104507
