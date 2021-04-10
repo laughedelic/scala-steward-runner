@@ -15,10 +15,10 @@ jobs:
           app_id: 103842
           private_key: ${{ secrets.AUTHOR_APP_PRIVATE_KEY }}
 
-      - name: Configure Git
-        run: |
-          git config --global user.email "103842+laughedelic[bot]@users.noreply.github.com"
-          git config --global user.name "laughedelic[bot]"
+      # - name: Configure Git
+      #   run: |
+      #     git config --global user.email "103842+laughedelic[bot]@users.noreply.github.com"
+      #     git config --global user.name "laughedelic[bot]"
 
       - name: Launch Scala Steward
         uses: laughedelic/scala-steward-action@gh-app-args-build
@@ -28,5 +28,5 @@ jobs:
           github-app-key: ${{ secrets.SCALA_STEWARD_APP_PRIVATE_KEY }}
           # used to author pull requests:
           github-token: ${{ steps.generate-token.outputs.token }}
-          author-email: 103842+laughedelic[bot]@users.noreply.github.com
+          author-email: 15197302+laughedelic[bot]@users.noreply.github.com
           author-name: laughedelic[bot]
