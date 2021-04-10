@@ -28,5 +28,5 @@ jobs:
           github-app-key: ${{ secrets.SCALA_STEWARD_APP_PRIVATE_KEY }}
           # used to author pull requests:
           github-token: ${{ steps.generate-token.outputs.token }}
-          author-email: 15197302+laughedelic[bot]@users.noreply.github.com
+          author-email: 80228653+laughedelic[bot]@users.noreply.github.com
           author-name: laughedelic[bot]
