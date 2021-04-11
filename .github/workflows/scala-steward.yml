@@ -18,12 +18,11 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config --global --list
           git config --list
 
       - run: |
-          git config --global --unset user.email
-          git config --global --unset user.name
+          git config --unset user.email
+          git config --unset user.name
 
       - name: Launch Scala Steward
         uses: laughedelic/scala-steward-action@gh-app-args-build
